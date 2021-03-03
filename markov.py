@@ -71,7 +71,7 @@ def make_chains(text_string):
 import random
 
 def make_text(dictionary):
-    """Return text from chains."""
+    """Return text/phrases from chains."""
     """Generate a dictionary and return the first random key as a list"""
     words = []
     first_keys = list(dictionary.keys())
@@ -81,10 +81,10 @@ def make_text(dictionary):
 
     """generate a random value from the second word of the first key"""
     word_2 = word_1[1] #second value of the first word pair
-    random_string = ""
     for i in range(len(first_keys)):
        if word_2 == first_keys[i][0]: #if 2nd value = first value of the first word pair in the list
             words.append(first_keys[i][1]) 
+
     return ' '.join(words)
  
 input_path = 'green-eggs.txt'
